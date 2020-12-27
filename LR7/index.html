@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Обязательные метатеги -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <style>
+        html {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        main {
+            overflow-x: hidden;
+        }
+        footer {
+            overflow-x: hidden;
+        }
+    </style>
+    <title>Нищук Роман ИУ5-52Б</title>
+</head>
+<body>
+<main class="bg-warning">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid modal-header">
+            <a class="navbar-brand" href="index.html"><b>Макдоналдс</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Мы на карте</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Новинки
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Биффер</a></li>
+                            <li><a class="dropdown-item" href="#">Чиккер</a></li>
+                            <li><a class="dropdown-item" href="#">Венская вафля</a></li>
+                            <li><a class="dropdown-item" href="#">Макфлурри Тирамису</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Доставка от 30 минут</a>
+                    </li>
+                </ul>
+                <div class="float-end">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#signUpModal">
+                        <i class="fas fa-user"></i> Регистрация
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="signUpModalLabel">Регистрация</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="g-3 needs-validation">
+                                        <div class="container row">
+                                            <div class="col-md-6">
+                                                <label for="validationCustom02" class="form-label">Фамилия</label>
+                                                <input type="text" class="form-control" id="validationCustom02" placeholder="Иванов" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="validationCustom03" class="form-label">Имя</label>
+                                                <input type="text" class="form-control" id="validationCustom03" placeholder="Иван" required>
+                                            </div>
+                                        </div>
+                                        <p></p>
+                                        <label for="validationCustom04" class="form-label">Пароль</label>
+                                        <input type="password" class="form-control" id="validationCustom04" placeholder="12345" required>
+                                        <p></p>
+                                        <label for="validationCustom05" class="form-label">Повторите Пароль</label>
+                                        <input type="password" class="form-control" id="validationCustom05" required>
+                                        <p></p>
+                                        <label for="validationCustom06" class="form-label">Ваш город</label>
+                                        <input type="text" class="form-control" id="validationCustom06">
+                                        <p></p>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                            <label class="form-check-label" for="invalidCheck">
+                                                Согласен с политикой конфиденциальности
+                                            </label>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0%" aria-valuemin="0%" aria-valuemax="100%" style="width: 50%"></div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-outline-warning" type="submit">Зарегистрироваться</button>
+                                            <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Выйти</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <table class="table table-warning table-borderless">
+        <tbody>
+            <tr>
+                <td class="align-bottom" style="text-align: right" width="60%"><h1>Биг Тейсти Три Сыра</h1></td>
+                <td class="align-middle" rowspan="2"><img src="img\1.webp" class="rounded img-fluid" style="max-width: 100%; height: auto"></td>
+            </tr>
+            <tr>
+                <td class="align-middle" style="text-align: right" width="60%"><b>Бургер с тремя видами сыра: Эмменталь, Гауда, сырный соус Чеддер, с большим сочным бифштексом, знаменитым соусом с дымком и свежими овощами. М-м-м, успей попробовать!</b></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-secondary table-borderless">
+        <tbody>
+        <tr>
+            <td class="align-middle" rowspan="2"><img src="img\2.webp" class="rounded img-fluid" style="max-width: 100%; height: auto"></td>
+            <td class="align-bottom" style="text-align: left" width="70%"><h1>Биг Тейсти Три Сыра МакКомбо Большой</h1></td>
+        </tr>
+        <tr>
+            <td class="align-middle" style="text-align: left" width="70%"><b>Большой МакКОМБО с Биг Тейсти Три Сыра, большой порцией картофеля и одним холодным (0,5 или 0,6) или горячим (0,3 или 0,4) напитком.</b></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-success table-borderless">
+        <tbody>
+        <tr>
+            <td class="align-bottom" style="text-align: right" width="40%"><h1>Ягодный Пунш</h1></td>
+            <td class="align-middle" rowspan="2"><img src="img\3.webp" class="rounded img-fluid" style="max-width: 100%; height: auto"></td>
+        </tr>
+        <tr>
+            <td class="align-middle" style="text-align: right" width="40%"><b>Встречайте — снова в меню! Горячий напиток на основе натурального пюре из ягод малины и черной смородины.</b></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+<footer class="bg-light modal-footer">
+    <address class="container-fluid">
+        <p>Контакт-центр 8 (495) 190 99 99</p>
+    </address>
+    <p class="container-fluid text-center">2020 © McDonald's Corporation</p>
+</footer>
+<!-- Optional JavaScript -->
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
