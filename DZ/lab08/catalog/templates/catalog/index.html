@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Регард</title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'catalog/img/logo1.png' %}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'catalog/css/style.css' %}">
+    <link href="{% static 'catalog/css/c3.min.css' %}" rel="stylesheet">
+
+    <style>
+            a:hover {
+            color: lime; /* Цвет ссылки при наведении на нее курсора мыши */
+            text-decoration: underline; /* Добавляем подчеркивание */
+            font-size:20px;
+           }
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+    <nav class="navbar navbar-light" style="background-color: rgb(204, 228, 248);">
+        <div class="container-fluid modal-header">
+            <a class="navbar-brand" style="color: #fff;" href="/">
+                <img width="250px" src="{% static 'catalog/img/logo.png' %}" />
+            </a>
+        </div>
+    </nav>
+
+    <main class="container-fluid" style="background-color: #fff;">
+        <div class="row justify-content-left">
+            <div class="col-4">
+               <h1 class="display-8 text-dark">Адреса Магазинов:</h1>
+                {% if regard_list %}
+                    <ul type="nav">
+                    {% for regard in regard_list %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'catalog:detail' regard.id %}">{{ regard.address }}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Магазины не найдены</p>
+                {% endif %}
+            </div>
+        </div>
+        <figure class="text-center">
+            <p class="text-primary"><em>Годовая Прибыль Сети Магазинов (в тыс. руб.)</em></p>
+        </figure>
+        <div id="chart"></div>
+    </main>
+    <footer class="modal-footer" style="background-color: rgb(73, 73, 73);">
+        <address class="container-fluid text-center">
+            <p class="text-light">© 2000–2021. Сеть компьютерных магазинов "РЕГАРД". Многоканальная телефонная линия: (495) 921-41-58</p>
+        </address>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="{% static 'catalog/js/c3.min.js' %}"></script>
+
+    <script>
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            columns: [
+                // ['data1', "{{ reports_1.0.profit }}", "{{ reports_1.1.profit }}", "{{ reports_1.2.profit }}", "{{ reports_1.3.profit }}"],
+                // ['data2', "{{ reports_2.0.profit }}", "{{ reports_2.1.profit }}", "{{ reports_2.2.profit }}", "{{ reports_2.3.profit }}"],
+                // ['data3', "{{ reports_3.0.profit }}", "{{ reports_3.1.profit }}", "{{ reports_3.2.profit }}", "{{ reports_3.3.profit }}"]
+            ],
+            names: {
+                data1: "г. Липецк, ул.Космонавтов, 3а",
+                data2: "г. Москва, Варшавское ш., 35",
+                data3: "г. Москва, Волгоградский проспект, 21"
+            }
+        },
+        axis: {
+            x: {
+                type: 'category',
+                categories: ['2017', '2018', '2019', '2020']
+            }
+        }
+    });
+
+    setTimeout(function (){
+        chart.load({
+            columns: [
+                ['data1', "{{ reports_1.0.profit }}", "{{ reports_1.1.profit }}", "{{ reports_1.2.profit }}", "{{ reports_1.3.profit }}"]
+            ]
+        });
+    },1000);
+
+    setTimeout(function (){
+        chart.load({
+            columns: [
+                ['data2', "{{ reports_2.0.profit }}", "{{ reports_2.1.profit }}", "{{ reports_2.2.profit }}", "{{ reports_2.3.profit }}"]
+            ]
+        });
+    },2000);
+
+    setTimeout(function (){
+        chart.load({
+            columns: [
+                ['data3', "{{ reports_3.0.profit }}", "{{ reports_3.1.profit }}", "{{ reports_3.2.profit }}", "{{ reports_3.3.profit }}"]
+            ]
+        });
+    },3000);
+    </script>
+
+</body>
+</html>
